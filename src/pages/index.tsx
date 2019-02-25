@@ -8,11 +8,11 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
     public render() {
         return (
-            <div>
+            <div className={styles.container}>
                 <h1>Hello world!</h1>
                 <p>CSS processors are great!</p>
             </div>
-        );
+        )
     }
 }
 
