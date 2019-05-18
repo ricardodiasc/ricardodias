@@ -2,7 +2,8 @@ module.exports = {
     siteMetadata: {
         name: `Ricardo Dias`,
         description: `Web and Game Development`,
-        tagline: `Web and Game Development`
+        tagline: `Web and Game Development`,
+        title: `Web and Game Development`
     },
     plugins : [
         `gatsby-plugin-sass`,

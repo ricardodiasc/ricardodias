@@ -1,5 +1,5 @@
 ---
-path: ""
+path: "/aboutme"
 date: 2019-02-28
 title: "About me"
 tags: ['ricardo', 'dias', 'about']

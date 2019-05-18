@@ -3,6 +3,7 @@ import * as styles from './index.module.scss';
 import { graphql } from "gatsby";
 
 import Header from '../components/header';
+import PostList from '../components/PostList';
 
 interface IndexPageProps {
     data : {
@@ -32,7 +33,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
         return (
             <div>
                 <Header name={name} tagline={tagline} styles={styles}/>
-                <p>This is a test of some text in body</p>
+                <PostList />
             </div>
         )
     }
