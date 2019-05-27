@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql } from "gatsby";
 
 interface PostListProps {
-    data : {
+    data? : {
         allMarkdownRemark: {
             edges: {
                 node: {
@@ -14,8 +14,9 @@ interface PostListProps {
         }
     }
 }
-export const postListQuery = graphql`
-    query  {
+
+export const query = graphql`
+    query HomePageQuery {
         allMarkdownRemark {
             edges {
               node {
@@ -28,11 +29,16 @@ export const postListQuery = graphql`
     }
 `;
 
+
 export default class PostList extends React.Component<PostListProps, {}> {
+
+    constructor(props:PostListProps) {
+        super(props);
+    }
 
     render() {
         // const { edges } = this.props.data.allMarkdownRemark;
-        console.log(this.props)
+        console.log('PostList: ',this.props)
         return(
             <div>
                Test
@@ -42,3 +48,5 @@ export default class PostList extends React.Component<PostListProps, {}> {
         )
     }
 }
+
+

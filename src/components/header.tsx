@@ -1,12 +1,12 @@
 import * as React from 'react';
+import * as styles from './index.module.scss';
 import { graphql, StaticQuery} from 'gatsby';
 
 interface HeaderProps {
-    name:string,
-    tagline:string,
-    styles:any
-}
-
+    name?:string,
+    tagline?:string,
+    styles?:any
+};
 
 export default class Header extends React.Component<HeaderProps,{}> {
 
@@ -15,10 +15,13 @@ export default class Header extends React.Component<HeaderProps,{}> {
         super(props);
     }
 
-    private queryTitle() {
+
+    public render() : JSX.Element {
         return (
-            <StaticQuery query={graphql`
-                query {
+            
+            < >
+                <StaticQuery query={graphql`
+                query queryHeader{
                     site {
                         siteMetadata {
                             name
@@ -27,21 +30,16 @@ export default class Header extends React.Component<HeaderProps,{}> {
                         }
                     }
                 }
-            `} />);
-    }
-
-    public render() : JSX.Element {
-        this.queryTitle();
-        const { name, tagline, styles } = this.props;
-        
-        return (
-            
-            <div>
+            `} 
+            render={data=>(
                 <div className={styles.container}>
-                    <h1>{ name }</h1>
-                    <p>{ tagline }</p>
-                </div> 
-            </div>
+                    <h1>{data.site.siteMetadata.name}</h1>
+                <p>{data.site.siteMetadata.tagline}</p>
+            </div>    
+            )}
+        />
+                 
+            </ >
         )
     }
 }
