@@ -9,17 +9,17 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -H 0.0.0.0",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "gatsby": "^2.1.18",
-    "gatsby-plugin-sass": "^2.0.10",
-    "gatsby-plugin-typescript": "^2.0.9",
+    "gatsby": "^2.3.4",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-typescript": "^2.0.11",
     "node-sass": "^4.11.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "typescript": "^3.3.3333"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.4.1"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
