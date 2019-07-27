@@ -6,7 +6,7 @@ RUN npm install && npm run build
 CMD ["npm" ,"run", "serve"]
 
 
-FROM nginx
+FROM nginx:1.17.1
 WORKDIR /usr/share/nginx/html
 EXPOSE 80
 COPY --from=builder /usr/src/app/public .
