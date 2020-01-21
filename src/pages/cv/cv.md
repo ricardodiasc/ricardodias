@@ -1,7 +1,9 @@
 ---
-path: "/cv"
+path: "/about"
 date: 2019-02-28
-title: "CV"
-tags: ['ricardo', 'dias', 'test']
+title: "cv"
+tags: ["ricardo", "dias", "test"]
 excerpt: "CV"
 ---
+
+This is my cv
