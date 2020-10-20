@@ -13,18 +13,18 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "gatsby": "^2.4.3",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-typescript": "^2.0.13",
-    "gatsby-source-filesystem": "^2.0.33",
-    "gatsby-transformer-remark": "^2.3.12",
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "typescript": "^3.4.5"
+    "gatsby": "^2.24.79",
+    "gatsby-plugin-sass": "^2.3.11",
+    "gatsby-plugin-typescript": "^2.4.19",
+    "gatsby-source-filesystem": "^2.3.34",
+    "gatsby-transformer-remark": "^2.8.41",
+    "node-sass": "^4.14.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "typescript": "^4.0.2"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^2.1.2"
   },
   "repository": {
     "type": "git",

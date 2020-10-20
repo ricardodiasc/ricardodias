@@ -1,4 +1,5 @@
 ---
+path: " /react-conf-2019" 
 title: React Conf BR 2019 - Um pequeno resumo
 date: '2019-10-16T09:30:00.284Z'
 author: 'Ricardo Dias'

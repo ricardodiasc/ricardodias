@@ -23,7 +23,6 @@ export default class PostList extends React.Component<PostListProps, {}> {
 
   render() {
     // const { edges } = this.props.data.allMarkdownRemark;
-    console.log("PostList: ", this.props);
     return (
       <>
         <StaticQuery
@@ -42,10 +41,10 @@ export default class PostList extends React.Component<PostListProps, {}> {
           `}
           render={data => (
             <>
-              {data.allMarkdownRemark.edges.map(e => (
+              {data.allMarkdownRemark.edges.map(({ node }) => (
                 <PostItem
-                  key={e.node.frontmatter.title}
-                  title={e.node.frontmatter.title}
+                  key={node.frontmatter.title}
+                  title={node.frontmatter.title}
                 />
               ))}
             </>
