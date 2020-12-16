@@ -1,6 +1,7 @@
 import React from 'react';
 import { WindowLocation } from "@reach/router"
 import { graphql, PageProps } from 'gatsby';
+import Layout from '../components/Layout';
 
 // interface PageQueryData {
 //   site: {
@@ -29,16 +30,28 @@ import { graphql, PageProps } from 'gatsby';
 //   readonly location: WindowLocation<LocationState>
 // }
 
+interface BlogPostInterface {
+  markdownRemark: {
+    id: string;
+    html: string;
+    frontmatter: {
+      title: string;
+    };
+  };
+}
 
+interface Props {
+  readonly data: BlogPostInterface,
+}
 
-const BlogPostTemplate = (props : PageProps ) => {
-  const {data} = props;
+const BlogPostTemplate = ({data}: Props) => {
+  // const {data} = props;
   console.log(data);
   return (
-    <div>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      <div>Apenas mais um template</div>
-    </div>
+    <Layout>
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <section dangerouslySetInnerHTML={{__html: data.markdownRemark.html }}></section>
+    </Layout>
   );
 };
 

@@ -33,6 +33,7 @@ export default class PostList extends React.Component<PostListProps, {}> {
                   node {
                     frontmatter {
                       title
+                      path
                     }
                   }
                 }
@@ -43,8 +44,10 @@ export default class PostList extends React.Component<PostListProps, {}> {
             <>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <PostItem
+                
                   key={node.frontmatter.title}
                   title={node.frontmatter.title}
+                  path={node.frontmatter.path}
                 />
               ))}
             </>

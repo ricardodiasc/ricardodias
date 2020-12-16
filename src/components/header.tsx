@@ -1,6 +1,7 @@
+import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import * as styles from './index.module.scss';
-import { graphql, StaticQuery} from 'gatsby';
+
 
 interface HeaderProps {
     name?:string,
@@ -18,28 +19,27 @@ export default class Header extends React.Component<HeaderProps,{}> {
 
     public render() : JSX.Element {
         return (
-            
-            < >
-                <StaticQuery query={graphql`
-                query queryHeader{
-                    site {
-                        siteMetadata {
-                            name
-                            tagline
-                            description
-                        }
+          <div id="header">
+            <StaticQuery
+              query={graphql`
+                query queryHeader {
+                  site {
+                    siteMetadata {
+                      name
+                      tagline
+                      description
                     }
+                  }
                 }
-            `} 
-            render={data=>(
-                <div className={styles.container}>
-                    <h1>{data.site.siteMetadata.name}</h1>
-                <p>{data.site.siteMetadata.tagline}</p>
-            </div>    
-            )}
-        />
-                 
-            </ >
-        )
+              `}
+              render={(data) => (
+                <>
+                  <h1><Link to="/" className={styles.homeLink}>{data.site.siteMetadata.name}</Link></h1>
+                  <p>{data.site.siteMetadata.tagline}</p>
+                </>
+              )}
+            />
+          </div>
+        );
     }
 }

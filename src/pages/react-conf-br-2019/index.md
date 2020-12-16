@@ -39,16 +39,12 @@ const DetalheTodo = await import('./components/DetalheTodo.js');
 ```
 
 - O Webpack tem um modo que não precisa configuração para ter seu bundle. Por default, a configuração padrão é: 
-```json
-
-```
 
 - Slides: https://pt.slideshare.net/MatheusGonalvesdaSil/webpack-and-the-state-of-the-bundlers
 
 
 ### EMASCript 2077 (ReasonML) -  Gabriel Rubens
 (Slides)[https://es2077-reactconf.netlify.com/]
-
 
 
 Larissa Farias
