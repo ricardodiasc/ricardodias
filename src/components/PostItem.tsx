@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 
-import * as style from "./postItem.module.scss";
+import * as style from "./PostItem.module.scss";
 
 interface PostItemProps {
   title: string;
